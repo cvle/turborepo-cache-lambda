@@ -1,0 +1,16 @@
+{
+  "name": "turborepo-lambda",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "rm -rf build/ && node_modules/.bin/esbuild src/index.js --bundle --platform=node --outfile=build/index.js && cd build && ../node_modules/.bin/bestzip build.zip index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bestzip": "^2.2.1",
+    "esbuild": "0.17.5",
+    "turborepo-remote-cache": "^1.11.0"
+  }
+}
